@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Threading; //  om sleep te kunnen gebruiken
+using System.Web;
 
 namespace WindFormsAppTestTenniscorebordSTARTPROJECT
 {
@@ -85,14 +86,18 @@ namespace WindFormsAppTestTenniscorebordSTARTPROJECT
         private void btnStuurDisplay_Click(object sender, EventArgs e)
         {
             if (cmbWaarde.SelectedIndex == -1) return;
-            string begin = "02";
-            string mode = "30"; // enkelvoudige display
-            string adres = display[(int)numDisplaynr.Value].ToString("X"); // voeg scherm toe aan het commando
-            string value = waarde[(int)cmbWaarde.SelectedIndex].ToString("X"); // voeg waarde toe
-            string eind= "03"; // eind
 
-            // hier
-            Serial.Write(commandos, 0, 5);
+            char adres = (char)display[(int)numDisplaynr.Value -1];
+            char value = (char)waarde[cmbWaarde.SelectedIndex];
+
+            char[] command = { (char)0x02, (char)0x30, adres, value, (char)0x03 };
+            Serial.Write(command, 0, 5);
+
+            // leds
+            if (rdbLed1.Checked)
+            {
+                char[] commandLed = { (char)0x02, (char)0x30, adres, value, (char)0x03 };
+            }
         }
     }
 }

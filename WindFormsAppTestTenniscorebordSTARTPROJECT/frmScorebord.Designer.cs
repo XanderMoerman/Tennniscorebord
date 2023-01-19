@@ -65,7 +65,7 @@
             // btnVerbreekPoort
             // 
             this.btnVerbreekPoort.Location = new System.Drawing.Point(424, 15);
-            this.btnVerbreekPoort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVerbreekPoort.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerbreekPoort.Name = "btnVerbreekPoort";
             this.btnVerbreekPoort.Size = new System.Drawing.Size(164, 48);
             this.btnVerbreekPoort.TabIndex = 9;
@@ -76,7 +76,7 @@
             // btnVerbindPoort
             // 
             this.btnVerbindPoort.Location = new System.Drawing.Point(252, 15);
-            this.btnVerbindPoort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVerbindPoort.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerbindPoort.Name = "btnVerbindPoort";
             this.btnVerbindPoort.Size = new System.Drawing.Size(164, 48);
             this.btnVerbindPoort.TabIndex = 8;
@@ -91,7 +91,7 @@
             this.pnlScoreBord.Controls.Add(this.pnlDisplayTest);
             this.pnlScoreBord.Enabled = false;
             this.pnlScoreBord.Location = new System.Drawing.Point(13, 79);
-            this.pnlScoreBord.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlScoreBord.Margin = new System.Windows.Forms.Padding(4);
             this.pnlScoreBord.Name = "pnlScoreBord";
             this.pnlScoreBord.Size = new System.Drawing.Size(578, 274);
             this.pnlScoreBord.TabIndex = 7;
@@ -113,7 +113,7 @@
             this.pnlBordTest.Controls.Add(this.btnWisAlleDisplays);
             this.pnlBordTest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBordTest.Location = new System.Drawing.Point(0, 98);
-            this.pnlBordTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBordTest.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBordTest.Name = "pnlBordTest";
             this.pnlBordTest.Size = new System.Drawing.Size(576, 174);
             this.pnlBordTest.TabIndex = 1;
@@ -136,7 +136,7 @@
             "wis",
             "error"});
             this.cmbD0.Location = new System.Drawing.Point(29, 63);
-            this.cmbD0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbD0.Margin = new System.Windows.Forms.Padding(4);
             this.cmbD0.Name = "cmbD0";
             this.cmbD0.Size = new System.Drawing.Size(77, 24);
             this.cmbD0.TabIndex = 17;
@@ -159,7 +159,7 @@
             "wis",
             "error"});
             this.cmbD9.Location = new System.Drawing.Point(464, 18);
-            this.cmbD9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbD9.Margin = new System.Windows.Forms.Padding(4);
             this.cmbD9.Name = "cmbD9";
             this.cmbD9.Size = new System.Drawing.Size(77, 24);
             this.cmbD9.TabIndex = 16;
@@ -182,7 +182,7 @@
             "wis",
             "error"});
             this.cmbD8.Location = new System.Drawing.Point(352, 18);
-            this.cmbD8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbD8.Margin = new System.Windows.Forms.Padding(4);
             this.cmbD8.Name = "cmbD8";
             this.cmbD8.Size = new System.Drawing.Size(77, 24);
             this.cmbD8.TabIndex = 15;
@@ -205,7 +205,7 @@
             "wis",
             "error"});
             this.cmbD7.Location = new System.Drawing.Point(240, 18);
-            this.cmbD7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbD7.Margin = new System.Windows.Forms.Padding(4);
             this.cmbD7.Name = "cmbD7";
             this.cmbD7.Size = new System.Drawing.Size(77, 24);
             this.cmbD7.TabIndex = 14;
@@ -228,7 +228,7 @@
             "wis",
             "error"});
             this.cmbD6.Location = new System.Drawing.Point(136, 18);
-            this.cmbD6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbD6.Margin = new System.Windows.Forms.Padding(4);
             this.cmbD6.Name = "cmbD6";
             this.cmbD6.Size = new System.Drawing.Size(77, 24);
             this.cmbD6.TabIndex = 13;
@@ -251,7 +251,7 @@
             "wis",
             "error"});
             this.cmbD5.Location = new System.Drawing.Point(29, 18);
-            this.cmbD5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbD5.Margin = new System.Windows.Forms.Padding(4);
             this.cmbD5.Name = "cmbD5";
             this.cmbD5.Size = new System.Drawing.Size(77, 24);
             this.cmbD5.TabIndex = 12;
@@ -274,7 +274,7 @@
             "wis",
             "error"});
             this.cmbD4.Location = new System.Drawing.Point(464, 63);
-            this.cmbD4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbD4.Margin = new System.Windows.Forms.Padding(4);
             this.cmbD4.Name = "cmbD4";
             this.cmbD4.Size = new System.Drawing.Size(77, 24);
             this.cmbD4.TabIndex = 11;
@@ -297,7 +297,7 @@
             "wis",
             "error"});
             this.cmbD3.Location = new System.Drawing.Point(352, 63);
-            this.cmbD3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbD3.Margin = new System.Windows.Forms.Padding(4);
             this.cmbD3.Name = "cmbD3";
             this.cmbD3.Size = new System.Drawing.Size(77, 24);
             this.cmbD3.TabIndex = 10;
@@ -320,7 +320,7 @@
             "wis",
             "error"});
             this.cmbD2.Location = new System.Drawing.Point(240, 63);
-            this.cmbD2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbD2.Margin = new System.Windows.Forms.Padding(4);
             this.cmbD2.Name = "cmbD2";
             this.cmbD2.Size = new System.Drawing.Size(77, 24);
             this.cmbD2.TabIndex = 9;
@@ -343,7 +343,7 @@
             "wis",
             "error"});
             this.cmbD1.Location = new System.Drawing.Point(136, 63);
-            this.cmbD1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbD1.Margin = new System.Windows.Forms.Padding(4);
             this.cmbD1.Name = "cmbD1";
             this.cmbD1.Size = new System.Drawing.Size(77, 24);
             this.cmbD1.TabIndex = 8;
@@ -351,7 +351,7 @@
             // btnStuurAlleDisplays
             // 
             this.btnStuurAlleDisplays.Location = new System.Drawing.Point(300, 113);
-            this.btnStuurAlleDisplays.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStuurAlleDisplays.Margin = new System.Windows.Forms.Padding(4);
             this.btnStuurAlleDisplays.Name = "btnStuurAlleDisplays";
             this.btnStuurAlleDisplays.Size = new System.Drawing.Size(243, 37);
             this.btnStuurAlleDisplays.TabIndex = 7;
@@ -361,7 +361,7 @@
             // btnWisAlleDisplays
             // 
             this.btnWisAlleDisplays.Location = new System.Drawing.Point(28, 113);
-            this.btnWisAlleDisplays.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnWisAlleDisplays.Margin = new System.Windows.Forms.Padding(4);
             this.btnWisAlleDisplays.Name = "btnWisAlleDisplays";
             this.btnWisAlleDisplays.Size = new System.Drawing.Size(243, 37);
             this.btnWisAlleDisplays.TabIndex = 6;
@@ -380,7 +380,7 @@
             this.pnlDisplayTest.Controls.Add(this.label1);
             this.pnlDisplayTest.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDisplayTest.Location = new System.Drawing.Point(0, 0);
-            this.pnlDisplayTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlDisplayTest.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDisplayTest.Name = "pnlDisplayTest";
             this.pnlDisplayTest.Size = new System.Drawing.Size(576, 98);
             this.pnlDisplayTest.TabIndex = 0;
@@ -389,7 +389,7 @@
             // 
             this.rdbLed2.AutoSize = true;
             this.rdbLed2.Location = new System.Drawing.Point(477, 55);
-            this.rdbLed2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbLed2.Margin = new System.Windows.Forms.Padding(4);
             this.rdbLed2.Name = "rdbLed2";
             this.rdbLed2.Size = new System.Drawing.Size(58, 20);
             this.rdbLed2.TabIndex = 7;
@@ -401,7 +401,7 @@
             // 
             this.rdbLed1.AutoSize = true;
             this.rdbLed1.Location = new System.Drawing.Point(477, 16);
-            this.rdbLed1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbLed1.Margin = new System.Windows.Forms.Padding(4);
             this.rdbLed1.Name = "rdbLed1";
             this.rdbLed1.Size = new System.Drawing.Size(58, 20);
             this.rdbLed1.TabIndex = 6;
@@ -412,7 +412,7 @@
             // btnStuurDisplay
             // 
             this.btnStuurDisplay.Location = new System.Drawing.Point(319, 27);
-            this.btnStuurDisplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStuurDisplay.Margin = new System.Windows.Forms.Padding(4);
             this.btnStuurDisplay.Name = "btnStuurDisplay";
             this.btnStuurDisplay.Size = new System.Drawing.Size(134, 37);
             this.btnStuurDisplay.TabIndex = 5;
@@ -423,15 +423,25 @@
             // numDisplaynr
             // 
             this.numDisplaynr.Location = new System.Drawing.Point(135, 36);
-            this.numDisplaynr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numDisplaynr.Margin = new System.Windows.Forms.Padding(4);
             this.numDisplaynr.Maximum = new decimal(new int[] {
-            9,
+            10,
+            0,
+            0,
+            0});
+            this.numDisplaynr.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             this.numDisplaynr.Name = "numDisplaynr";
             this.numDisplaynr.Size = new System.Drawing.Size(49, 22);
             this.numDisplaynr.TabIndex = 4;
+            this.numDisplaynr.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label2
             // 
@@ -461,7 +471,7 @@
             "wis",
             "error"});
             this.cmbWaarde.Location = new System.Drawing.Point(247, 34);
-            this.cmbWaarde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbWaarde.Margin = new System.Windows.Forms.Padding(4);
             this.cmbWaarde.Name = "cmbWaarde";
             this.cmbWaarde.Size = new System.Drawing.Size(64, 24);
             this.cmbWaarde.TabIndex = 2;
@@ -479,7 +489,7 @@
             // btnZoekPoorten
             // 
             this.btnZoekPoorten.Location = new System.Drawing.Point(13, 15);
-            this.btnZoekPoorten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnZoekPoorten.Margin = new System.Windows.Forms.Padding(4);
             this.btnZoekPoorten.Name = "btnZoekPoorten";
             this.btnZoekPoorten.Size = new System.Drawing.Size(120, 48);
             this.btnZoekPoorten.TabIndex = 6;
@@ -491,7 +501,7 @@
             // 
             this.cmbPoort.FormattingEnabled = true;
             this.cmbPoort.Location = new System.Drawing.Point(141, 27);
-            this.cmbPoort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbPoort.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPoort.Name = "cmbPoort";
             this.cmbPoort.Size = new System.Drawing.Size(101, 24);
             this.cmbPoort.TabIndex = 5;
@@ -505,13 +515,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 297);
+            this.ClientSize = new System.Drawing.Size(598, 366);
             this.Controls.Add(this.btnVerbreekPoort);
             this.Controls.Add(this.btnVerbindPoort);
             this.Controls.Add(this.pnlScoreBord);
             this.Controls.Add(this.btnZoekPoorten);
             this.Controls.Add(this.cmbPoort);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmScorebord";
             this.Text = "Tennisscorebord testen";
             this.pnlScoreBord.ResumeLayout(false);
