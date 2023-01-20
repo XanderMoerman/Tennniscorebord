@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using System.Threading; //  om sleep te kunnen gebruiken
 using System.Web;
+using System.ComponentModel.Design;
 
 namespace WindFormsAppTestTenniscorebordSTARTPROJECT
 {
@@ -92,12 +92,61 @@ namespace WindFormsAppTestTenniscorebordSTARTPROJECT
 
             char[] command = { (char)0x02, (char)0x30, adres, value, (char)0x03 };
             Serial.Write(command, 0, 5);
+        }
 
-            // leds
-            if (rdbLed1.Checked)
+        private void RdbCheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radio = sender as RadioButton;
+            if(radio.Name == "rdbLed1" && radio.Checked) // radio button 1
             {
-                char[] commandLed = { (char)0x02, (char)0x30, adres, value, (char)0x03 };
+                char[] commandLed2 = { (char)0x02, (char)0x30, (char)0x59, (char)0x00, (char)0x03 }; // led2 uit
+                Serial.Write(commandLed2, 0, 5);
+                Thread.Sleep(50);
+                char[] commandLed1 = { (char)0x02, (char)0x30, (char)0x58, (char)0x01, (char)0x03 }; // led1 aan
+                Serial.Write(commandLed1, 0, 5);
             }
+            else if(radio.Name == "rdbLed2" && radio.Checked) // radio button 2
+            {
+                char[] commandLed1 = { (char)0x02, (char)0x30, (char)0x58, (char)0x00, (char)0x03 }; // led1 uit
+                Serial.Write(commandLed1, 0, 5);
+                Thread.Sleep(50);
+                char[] commandLed2 = { (char)0x02, (char)0x30, (char)0x59, (char)0x01, (char)0x03 }; // led2 aan
+                Serial.Write(commandLed2, 0, 5);
+            }
+        }
+
+        string[] CmbWaarden = new string[10] {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"};
+        bool[] CmbChanged = new bool[10] {false, false, false, false, false, false, false, false, false, false};
+        private void btnStuurAlleDisplays_Click(object sender, EventArgs e)
+        {
+            foreach(Control ctr in pnlBordTest.Controls) // alle controls in de panel
+            {
+                if(ctr is ComboBox) // als de control een combo box is
+                {
+                    if (CmbWaarden[(int)ctr.Tag].ToString() != ctr.Text) // als de waarde van de combobox niet gelijk is aan die in de array
+                    {
+                        CmbWaarden[(int)ctr.Tag] = ctr.Text; // array waarde is nu nieuwe waarde
+                        char[] commandDisplay = { (char)0x02, (char)0x30, (char)display[(int)ctr.Tag], (char)waarde[0], (char)0x03 }; // led2 aan
+                        Thread.Sleep(50);
+                    }
+                }
+            }
+
+            for(int i = 0; i <= 9; i++)
+            {
+                // boven vervangen hier
+                if(CmbChanged[i])
+                {
+                    // hier
+                }
+            }
+        }
+
+        private void DisplaySelectedIndexChanged(object sender, EventArgs e) // verander de waarde als de index veranderd
+        {
+            ComboBox cmb = sender as ComboBox;
+            CmbWaarden[(int)cmb.Tag] = cmb.Text;
+            CmbChanged[(int)cmb.Tag] = true;
         }
     }
 }

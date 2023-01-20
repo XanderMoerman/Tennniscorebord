@@ -140,6 +140,8 @@
             this.cmbD0.Name = "cmbD0";
             this.cmbD0.Size = new System.Drawing.Size(77, 24);
             this.cmbD0.TabIndex = 17;
+            this.cmbD0.Tag = "0";
+            this.cmbD0.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // cmbD9
             // 
@@ -163,6 +165,8 @@
             this.cmbD9.Name = "cmbD9";
             this.cmbD9.Size = new System.Drawing.Size(77, 24);
             this.cmbD9.TabIndex = 16;
+            this.cmbD9.Tag = "8";
+            this.cmbD9.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // cmbD8
             // 
@@ -186,6 +190,8 @@
             this.cmbD8.Name = "cmbD8";
             this.cmbD8.Size = new System.Drawing.Size(77, 24);
             this.cmbD8.TabIndex = 15;
+            this.cmbD8.Tag = "8";
+            this.cmbD8.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // cmbD7
             // 
@@ -209,6 +215,8 @@
             this.cmbD7.Name = "cmbD7";
             this.cmbD7.Size = new System.Drawing.Size(77, 24);
             this.cmbD7.TabIndex = 14;
+            this.cmbD7.Tag = "7";
+            this.cmbD7.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // cmbD6
             // 
@@ -232,6 +240,8 @@
             this.cmbD6.Name = "cmbD6";
             this.cmbD6.Size = new System.Drawing.Size(77, 24);
             this.cmbD6.TabIndex = 13;
+            this.cmbD6.Tag = "6";
+            this.cmbD6.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // cmbD5
             // 
@@ -255,6 +265,8 @@
             this.cmbD5.Name = "cmbD5";
             this.cmbD5.Size = new System.Drawing.Size(77, 24);
             this.cmbD5.TabIndex = 12;
+            this.cmbD5.Tag = "5";
+            this.cmbD5.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // cmbD4
             // 
@@ -278,6 +290,8 @@
             this.cmbD4.Name = "cmbD4";
             this.cmbD4.Size = new System.Drawing.Size(77, 24);
             this.cmbD4.TabIndex = 11;
+            this.cmbD4.Tag = "4";
+            this.cmbD4.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // cmbD3
             // 
@@ -301,6 +315,8 @@
             this.cmbD3.Name = "cmbD3";
             this.cmbD3.Size = new System.Drawing.Size(77, 24);
             this.cmbD3.TabIndex = 10;
+            this.cmbD3.Tag = "3";
+            this.cmbD3.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // cmbD2
             // 
@@ -324,6 +340,8 @@
             this.cmbD2.Name = "cmbD2";
             this.cmbD2.Size = new System.Drawing.Size(77, 24);
             this.cmbD2.TabIndex = 9;
+            this.cmbD2.Tag = "2";
+            this.cmbD2.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // cmbD1
             // 
@@ -347,6 +365,8 @@
             this.cmbD1.Name = "cmbD1";
             this.cmbD1.Size = new System.Drawing.Size(77, 24);
             this.cmbD1.TabIndex = 8;
+            this.cmbD1.Tag = "1";
+            this.cmbD1.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // btnStuurAlleDisplays
             // 
@@ -357,6 +377,7 @@
             this.btnStuurAlleDisplays.TabIndex = 7;
             this.btnStuurAlleDisplays.Text = "Stuur alle Gewijzigde Displays";
             this.btnStuurAlleDisplays.UseVisualStyleBackColor = true;
+            this.btnStuurAlleDisplays.Click += new System.EventHandler(this.btnStuurAlleDisplays_Click);
             // 
             // btnWisAlleDisplays
             // 
@@ -394,8 +415,10 @@
             this.rdbLed2.Size = new System.Drawing.Size(58, 20);
             this.rdbLed2.TabIndex = 7;
             this.rdbLed2.TabStop = true;
+            this.rdbLed2.Tag = "2";
             this.rdbLed2.Text = "Led2";
             this.rdbLed2.UseVisualStyleBackColor = true;
+            this.rdbLed2.CheckedChanged += new System.EventHandler(this.RdbCheckedChanged);
             // 
             // rdbLed1
             // 
@@ -406,8 +429,10 @@
             this.rdbLed1.Size = new System.Drawing.Size(58, 20);
             this.rdbLed1.TabIndex = 6;
             this.rdbLed1.TabStop = true;
+            this.rdbLed1.Tag = "µ1";
             this.rdbLed1.Text = "Led1";
             this.rdbLed1.UseVisualStyleBackColor = true;
+            this.rdbLed1.CheckedChanged += new System.EventHandler(this.RdbCheckedChanged);
             // 
             // btnStuurDisplay
             // 
