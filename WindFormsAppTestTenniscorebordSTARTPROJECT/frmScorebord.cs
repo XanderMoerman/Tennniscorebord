@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading; //  om sleep te kunnen gebruiken
 using System.Web;
 using System.ComponentModel.Design;
+using System.Runtime.ConstrainedExecution;
 
 namespace WindFormsAppTestTenniscorebordSTARTPROJECT
 {
@@ -115,38 +116,41 @@ namespace WindFormsAppTestTenniscorebordSTARTPROJECT
             }
         }
 
-        string[] CmbWaarden = new string[10] {"0", "0", "0", "0", "0", "0", "0", "0", "0", "0"};
-        bool[] CmbChanged = new bool[10] {false, false, false, false, false, false, false, false, false, false};
+        int[] ArrayWaarden = new int[10] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        bool[] ArrayChanged = new bool[10] {false, false, false, false, false, false, false, false, false, false};
         private void btnStuurAlleDisplays_Click(object sender, EventArgs e)
         {
-            foreach(Control ctr in pnlBordTest.Controls) // alle controls in de panel
+            for(int i = 0; i <= 9; i++) // loop door alle 10 de waarden in CmbChanged
             {
-                if(ctr is ComboBox) // als de control een combo box is
+                if(ArrayChanged[i])
                 {
-                    if (CmbWaarden[(int)ctr.Tag].ToString() != ctr.Text) // als de waarde van de combobox niet gelijk is aan die in de array
-                    {
-                        CmbWaarden[(int)ctr.Tag] = ctr.Text; // array waarde is nu nieuwe waarde
-                        char[] commandDisplay = { (char)0x02, (char)0x30, (char)display[(int)ctr.Tag], (char)waarde[0], (char)0x03 }; // led2 aan
-                        Thread.Sleep(50);
-                    }
-                }
-            }
-
-            for(int i = 0; i <= 9; i++)
-            {
-                // boven vervangen hier
-                if(CmbChanged[i])
-                {
-                    // hier
+                    ArrayChanged[i] = false;
+                    char[] commandDisplay = { (char)0x02, (char)0x30, (char)display[i], (char)waarde[ArrayWaarden[i]], (char)0x03 };
+                    Serial.Write(commandDisplay, 0, 5); // stuur commando
+                    Thread.Sleep(50); // wacht 50ms
                 }
             }
         }
 
         private void DisplaySelectedIndexChanged(object sender, EventArgs e) // verander de waarde als de index veranderd
         {
-            ComboBox cmb = sender as ComboBox;
-            CmbWaarden[(int)cmb.Tag] = cmb.Text;
-            CmbChanged[(int)cmb.Tag] = true;
+            ComboBox cmbHulp = sender as ComboBox;
+            int tag = Convert.ToInt16(cmbHulp.Tag); // convert string naar 16 bit int
+            ArrayWaarden[tag] = cmbHulp.SelectedIndex; // selected index voor de waarde te kunnen halen uit waarde array
+            ArrayChanged[tag] = true; // bool op true zetten zodat we weten dat deze veranderd is
+        }
+
+        private void btnWisAlleDisplays_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i <= 9; i++)
+            {
+                ArrayChanged[i] = false; // reset naar false
+                ArrayWaarden[i] = 0; // reset naar 0
+
+                char[] commandDisplay = { (char)0x02, (char)0x30, (char)display[i], (char)0x45, (char)0x03 }; // wis display
+                Serial.Write(commandDisplay, 0, 5);
+                Thread.Sleep(50);
+            }
         }
     }
 }

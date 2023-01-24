@@ -165,7 +165,7 @@
             this.cmbD9.Name = "cmbD9";
             this.cmbD9.Size = new System.Drawing.Size(77, 24);
             this.cmbD9.TabIndex = 16;
-            this.cmbD9.Tag = "8";
+            this.cmbD9.Tag = "9";
             this.cmbD9.SelectedIndexChanged += new System.EventHandler(this.DisplaySelectedIndexChanged);
             // 
             // cmbD8
@@ -388,6 +388,7 @@
             this.btnWisAlleDisplays.TabIndex = 6;
             this.btnWisAlleDisplays.Text = "Wis alle Displays";
             this.btnWisAlleDisplays.UseVisualStyleBackColor = true;
+            this.btnWisAlleDisplays.Click += new System.EventHandler(this.btnWisAlleDisplays_Click);
             // 
             // pnlDisplayTest
             // 
