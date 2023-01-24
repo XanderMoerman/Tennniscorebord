@@ -23,11 +23,6 @@ namespace WindFormsAppTestTenniscorebordSTARTPROJECT
         public frmScorebord()
         {
             InitializeComponent();
-            // voeg alle waarden toe aan de combobox
-            for(int i = 0; i < waarde.Length; i++)
-            {
-                cmbWaarde.Items.Add(waarde[i]);
-            }
         }
 
         private void btnZoekPoorten_Click(object sender, EventArgs e)
@@ -86,13 +81,14 @@ namespace WindFormsAppTestTenniscorebordSTARTPROJECT
         }
         private void btnStuurDisplay_Click(object sender, EventArgs e)
         {
-            if (cmbWaarde.SelectedIndex == -1) return;
+            if (cmbWaarde.SelectedIndex == -1) return; // check of er een waarde geselecteerd is
 
+            // neem de juiste hexadecimale waarden uit de array
             char adres = (char)display[(int)numDisplaynr.Value -1];
             char value = (char)waarde[cmbWaarde.SelectedIndex];
 
-            char[] command = { (char)0x02, (char)0x30, adres, value, (char)0x03 };
-            Serial.Write(command, 0, 5);
+            char[] command = { (char)0x02, (char)0x30, adres, value, (char)0x03 }; // zet alles in 1 commando
+            Serial.Write(command, 0, 5); // stuur het commando
         }
 
         private void RdbCheckedChanged(object sender, EventArgs e)
@@ -101,18 +97,18 @@ namespace WindFormsAppTestTenniscorebordSTARTPROJECT
             if(radio.Name == "rdbLed1" && radio.Checked) // radio button 1
             {
                 char[] commandLed2 = { (char)0x02, (char)0x30, (char)0x59, (char)0x00, (char)0x03 }; // led2 uit
-                Serial.Write(commandLed2, 0, 5);
-                Thread.Sleep(50);
+                Serial.Write(commandLed2, 0, 5); // stuur het commando
+                Thread.Sleep(50); // wacht 50ms voor we de andere sturen
                 char[] commandLed1 = { (char)0x02, (char)0x30, (char)0x58, (char)0x01, (char)0x03 }; // led1 aan
-                Serial.Write(commandLed1, 0, 5);
+                Serial.Write(commandLed1, 0, 5); // stuur het commando
             }
             else if(radio.Name == "rdbLed2" && radio.Checked) // radio button 2
             {
                 char[] commandLed1 = { (char)0x02, (char)0x30, (char)0x58, (char)0x00, (char)0x03 }; // led1 uit
-                Serial.Write(commandLed1, 0, 5);
-                Thread.Sleep(50);
+                Serial.Write(commandLed1, 0, 5); // stuur het commando
+                Thread.Sleep(50); // wacht 50ms voor we de andere sturen
                 char[] commandLed2 = { (char)0x02, (char)0x30, (char)0x59, (char)0x01, (char)0x03 }; // led2 aan
-                Serial.Write(commandLed2, 0, 5);
+                Serial.Write(commandLed2, 0, 5); // stuur het commando
             }
         }
 
